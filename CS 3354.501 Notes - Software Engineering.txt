@@ -1,0 +1,1188 @@
+CS 3354.501 Notes - Software Engineering
+
+What is Software Engineering?
+- Software Engineering is the application of quantifiable, disciplined, and repeatable approach to design, 
+development, and maintainence of software systems.
+
+4 repeatable steps of Engineering Discipline developing software systems.
+1. Understanding the problem to be addressed by the new system
+2. Designing and planning a software-based solution to the problem.
+3. Building the solution within a predicted project lifecycle.
+4. Ensuring that the resulting system is useful and reliable.
+
+- The goal of software engineering is to improve the percentage of successful projects.
+- How? By solving problems that are related to programming in the large.
+
+SE Project Stats
+- 18% are canceled
+- 29% are successful
+- 53% are completed late, over budget, or with missing features.
+
+SE Project Failure
+- Working systems delivered but delivered late or over budget.
+- Systems delivered missing features needed by the client.
+- Systems delivered containing faults(bugs)
+- Systems not delivered at all
+
+We most need software engineering when programming in the large
+- When building a system
+-- that contain hundreds of thousands or even millions of lines of code.
+-- that is built over the course of months or years.
+-- containing many interacting, interdependent components.
+-- That involves the combined contributions of many engineers and technicians.
+
+- The logistics of coordinating large projects from its start to a successful completion is a difficult challenge.
+-- The challenge of planning and coordinating the efforts and contributions of the project's team members.
+
+Roles in Software Engineering
+1. Client: The group(organization) with a problem to be solved.
+- Clients assumes the cost of the developing the system/solution
+
+2. Subject Matter Expert: The group with the technical and business knowledge needed to both describe the problem and evaluate the 
+solution delivered by the software engineering team.
+- Most times members of the SME and client are of the same organization.
+- SME and developers are of the same group (startups)
+
+3. Developers: The group who assumes responsibility for producing and delivering a solution to the client.
+
+4. Users: The group who will utilize the solution.
+
+- A coporation internal IT department providing solutions to the problems within the organization.
+- The development team are contracted IT professionals hired by the client to produce and deliver the needed
+solution.
+
+SM Experts -> Protects the interests of -> Client
+Client -> Funds and sets goals for project -> Developers
+Developers -> Delivers system -> Experts 
+Developers <-> SM Experts
+- Describes the problem domain and evaluates the developers proposed solutions.
+
+Custom Applications: A system/solution commisioned by an organization for a specific purpose.
+- A system the automates/supports some business process.
+- A system written to the specification of an insurance company specific claims processing process 
+that will not work for another insurance company with a different process.
+
+Commercial Applications: A product to be sold to the public.
+- A desktop/console video game, word processor.
+- A web service delivered to users through an app aka Spotify.
+
+SE Terminology
+System: A collection of software and hardware services that when combined solves a problem.
+
+Application: Individual software programs (executables) that operate stand alone/contribute to the overall system.
+
+**Systems are often composed of many applications that execute independently and communicate over a network/IPC.**
+
+Features: Statements that informally categorize and describes the services to be delivered/implemented by the system.
+- Informal statements that describe information the system maintains/services the system performs.
+- Features lacks the detail needed to bring a project to a successful conclusion.
+- Features are the basis for organizaing requirements gathering activities.
+
+Requirements: The mechanism used to formally describe the features to be delivered with the system.
+- Requirements are detailed and specific descriptions of the system.
+- Requirements are gathered from the client/SME and are formally recorded in one or more documents.
+- The systems requirements defines the scope of the project what the developmental team is expected to deliver to the client.
+
+Sensor Interface: Lidar Interface/Radar Interface/GPS & IMU/Wheel Velocity -> Perception: Localization/Obstacle Avoidance/Pose Estimation 
+-> Navigation: Top Level Control/Path Planning -> Vehicle Interface: Steering Control/Throttle or Brake Controls 
+-> User Interface: Wireless estop/Visualizer GUI -> Global Services: Vehical Health Status/Data logger/Inter Process Control
+
+
+Software Engineering Terminology
+
+Problem Domain: Knowledge of the entities (things) and operations (services) that make up the system's domain.
+
+- Knowledge needed by the development team to build a system for client and users.
+- Two systems share the same domain will share similar features.
+- Different problem domains don't have anything in common.
+- Before the dev-team can successfully build a system, they must become experts in the system's problem domain.
+
+**Building software systems without discipline**
+- Textbook describes "Code and Fix Development Model" where code is written without planning.
+- Code and Fix can work for small projects.
+
+
+**Project Failures caused by any undisciplined approach to building systems**
+ - Systems delivered late, or over budget, or canceled.
+ - Systems delivered with missing features, bugs, and other defects that one addressed by never-ending releases(versions).
+ - Code and Fix builds software without planning or organization.
+
+First Versions -> Customer reports defects or missing features <-> Developers address problem and release new version
+
+Code and Fix Cycle
+ 1. Developers build an initial release
+ 2. Client addresses problems 
+ 3. Developers fix problems and release new version.
+
+Problems/Characteristics of Code & Fix
+ 1. Development(coding) begins without a precise understanding of what the client wants/needs.
+ 2. There is no clear agreement of when project is finished. 
+ 3. C&F results in poor relations between the client and the developers.
+ 4. Poorly designed and unmaintainable implementation(code).
+
+
+Software Engineering with Discipline
+ - Discipline in SE means allocating the resources needed to understand the system before building.
+
+1. Understand
+2. Plan
+3. Design
+4. Execute
+5. Verify
+
+
+With a disciplined approach to SE, project is most likely to be 
+1. Delivered on time and on budget
+2. Delivered with all agreed upon features.
+3. Delivered free of faults/defects.
+
+Delivered on-time and on-budget
+- A successful software engineering project starts off with, and consistently updates its project schedule.
+- Schedule starts with milestones and delivery dates.
+- Accurate estimate of resources needed (time, budget, and personnel)
+
+Milestones: Important accomplishments to be completed between the project's start and delivery dates.
+Each milestone is associated with an estimated completion date.
+
+
+
+
+ESSENTIAL SDLC
+
+
+Inception -> Begin Project -> Requirement Phase(3-6 weeks) -> Analysis(3 weeks) -> Design Activities(3 weeks) -> Construction(10-20 weeks)
+-> Integration Testing(3 weeks) -> Project Delivery
+
+
+
+
+
+
+
+
+- Features, requirements, and other techniques are a means of recording what the system will need to do.
+- Development team can determine whether the system is complete and correct.
+- Complete in that the delivered system provides all the agreed upon services between the client and development team.
+- Correct in that service implementations are useful to the client.
+- Determined the level of detail requires a discipline approach to recording system's requirements.
+
+
+Delivered free of defects
+- Programming errors
+- Missing or incorrect features
+- Identified by exercising/testing the system.
+
+Proper testing requires Engineering Discipline 
+1. Unit Testing - Testing of individual classes and class method.
+2. Integration Testing - Testing of the system as an integrated whole.
+
+** SOFTWARE ENGINEERING PROVIDES TECHNIQUES USED TO GUIDE THE DESIGN, CONSTRUCTION, TESTING, AND DELIVERY.
+
+SDLC (Software Development Lifecycle)
+- Process's lifecycle is divided into phases
+1. Activities performed by the development team throughout project lifecycle.
+2. Artifacts that are produced by the execution of activity. (documents, designs)
+
+Generic Lifecycle Phases: Requirements, Analysis, Design, Implementation, IT, and Delivery.
+
+Phases of the Generic Project Lifecycle
+Requirements: The development team builds an understanding of the system's responsibilities.
+
+Analysis: The team builds an in-depth understanding of the problem domain but not (necessarily) the software design.
+
+- A missing requirement found early in project is easily corrected.
+- A missing requirement that has already been delivered, is very expensive to correct.
+- GET YOUR SHIT TOGETHER AND FIX EVERYTHING EARLY!
+
+Phases Continued
+Design: Build models of the system's software structure. 
+- UML (Unified Modeling Language)
+- Decompose the system into discrete sofware components.
+- Identify how components interact with each other.
+
+Implementation: Construct the system according to the design.
+- Build, integrate, and test the HW and SW components.
+- Code and Test
+- Integrate and test and fix faults.
+
+Integration Testing: After implementation and before delivery the system is throroughly tested to discover 
+any defects that exist after the development team has finished coding. 
+- Formal activities that involves a seperate quality assurance team responsible for testing for and tracking defects.
+
+Delivery: The process of delivering and installing the system in its production environment.
+- Configuring the servers, databases, network, tasks required by system to operate.
+- Making it public.
+
+Umbrella Activities - activities executed by the development team throughout project lifecyle.
+- Independent Phases
+- Project schedule is built early in the project and is monitored and updated throughout project lifecyle.
+- Important to continuously monitor the project's progress and determine ASAP if the schedule needs revision.
+
+Testing
+- Testing of the system as its constructed is also carried out throughout project lifecyle.
+- Unit Testing
+- Important that bugs in the system be detected and corrected as soon as possible.
+- Purpose is to identify bugs and regressions.
+
+Documentation
+- Executing each phase generates documents
+- Each phase's artifacts provides the information needed to execute the next phase.
+
+Importance for maintaining documentation
+- Phase activities: Each phase's activities relies on the documents produced by the previous phase.
+- Preserving Knowledge: Engineers leave by taking their knowledge of the problem domain and systems design with them.
+- On-Boarding: When new team members join the project, they can rely on detailed documentation to aid in their swift and productive integration with the team.
+- Integration Testing is executed by the QA team who needs the required documents, use cases, and other design documents to produce integration test scenarios that are 
+complete.
+- Future extensions and bug fixes might be carried out years after the initial delivery of a system.
+- Unlikely the original development team will be assigned these tasks.
+- Complete and up to date documentation is often the only means of communicating the domain knowledge, requirements, analysis, and design 
+and other info needed to maintain the system.
+
+
+Chapter 2
+Software Lifecycle Models
+
+- A software development lifecycle model provides instructions to be followed when building software-based systems.
+- A lifecycle model describes the activities that are performed by software development team during the project lifecycle.
+- The goals of any lifecycle is the successful delivery of a complete correct system.
+- There have been many software development models published over the years.
+- Most are variations on the Generic Waterfall Model.
+
+Generic Waterfall Model
+
+Requirements Gathering -> Requirements Analysis -> Software Design -> Implementation -> Integration Testing -> Delivery
+
+
+- Each phase recommends one or more activities to be performed by the development team.
+
+Requirements - Case Development
+Analysis - Build UML models that describe the problem domain.
+Design - Build UML models that describe the software design.
+Implementation - Code and unit test system classes and components
+IT - Test the systm against requirements.
+Delivery - Deliver the product.
+
+
+Prescriptive Models
+- first development processes.
+- goes back 50 years.
+- based on existing project management techniques.
+- invented to address software development problems of past and present.
+- The process has phases and activites and artifacts to be produced.
+- Well defined.
+- The team is to follow the phases when making a software.
+- Prescribed in detail.
+- Emphasize management's monitoring and control of execution by development team.
+- Waterfall process
+  - Each waterfall phase is executed only ONCE.
+
+Arguments supporting Waterfall process
+- Waterfall bring discipline to software development.
+- requires a detailed recording of requirements, analysis, and design models.
+- Producing 100% correct requirements and design artifacts is necessary.
+
+Arguments against Waterfall process
+- Waterfall stipulates that each phase to be executed only once.
+- Only one time opportunity to execute each phase correctly.
+- Waterfall requires that the artifacts produced at each lifecycle phase by 100% correct before moving on.
+- Its very unlikely to correct and completely capture a system's requirements, analysis, and design and is very expensive.
+
+
+Difficulties of Requirement Gathering Activities
+- A system of medium to large complexity can havge thousands of requirements to document and manage.
+- SME is often unable to correctly identify all the requirements.
+- Customers wish to change or add additional features to the system after the requirements phase activities has been completed.
+
+Waterfall Processes are difficult to execute
+- Organizations lack the resourcs and skills to correctly complete the requirements, analysis, and design activities
+- Resources: Fully documenting every aspect can take hundreds of hours.
+- Skill: Only a skilled architect can do this.
+- Erros tend to be caught later in the project.
+- Doesn't recognize the need to accomodate changes after requirements phase.
+- Customers must be patient.
+
+
+Incremental (Iterative) Models
+- Share many of characteristics of prescriptive models.
+- Incremental models allow the system to develop incrementally over the project lifecycle.
+- Incremental models emphasize cycles (iterations) that include analysis and design/code/test for each feature to be delivered.
+- Incremental models allow the team to develop the system's requirements and design incrementally over time.
+
+
+- Both the Prescriptive and Incremental Models describe a development process that guides the contruction of software based systems.
+- A process based on these models describes a distinct set of activities executed during each phase
+- Umbrella Activities
+
+
+Agile Models
+- Agile models eliminate the monitoring and control activities prescribed by prescritive models.
+- Agile models emphasize software activities over generating and maintaining artifacts (documents).
+- A software development process based on the Agile model is free of mandated activities and rigid controls.
+- A process based on the Agile model recommends few activities and artifacts for the dev team to execute.
+- eliminates the overhead of creating and maintaining documents and other artifacts required by a prescriptive phase.
+- Agile process relies on the team to self organize the activities needed to complete project.
+
+
+Winburg study
+Waterfall with Feedback Lifecycle Model
+
+
+Ierative/Incremental Development
+- Issues with Winburg study are common
+- Each release has new flaws
+- Each release has an evolved system
+- We should embrace an incremental lifecycle model
+
+
+- A waterfall process requires that we fully capture the system’srequirements before starting analysis.
+- Incremental approach to development allows developers to incrementally analyze, design, code, and test the system.
+
+
+The Reality of Software Development
+-  Ideally, the team follows a waterfall process applying the phasesof their process resulting in a complete and correct system.
+- Unfortunately, this approach seldom (never) works.❑ The SME & team produces incorrect and incomplete requirements.
+- The client changes requirements during the project’s execution.❑ The development team makes mistakes.
+- They miss-interpret the requirements resulting in incorrect features.
+- There are problems with the system’s design that must be reworked.
+ - We can’t eliminate these problems, but we can minimize theirnegative effects on the project’s outcome.
+ - Incremental Software Development Models attempt to minimizethe effects of these problems.
+
+
+An Incremental Model applies the Waterfall Phases and Activities in an incremental fashion
+The Incremental SD Model minimizes the damage caused by errors, incomplete information, and changing system requirements.
+"Design a little, Code a little, and Test a little"
+
+Project Inception -> Iteration Planning -> Refine Requirements -> Analysis and Design -> Construction -> System Deployment or System Evaluation -> Iteration Evaluation 
+-> Iteration Planning
+- Each Iteration lasts 3-5 weeks
+- Feedback occurs after each Iteration
+
+
+Problems are identified at the end of each Iteration
+- System evaluation activity allows the customer to identify errors early in project.
+- Compared to waterfall the system is not evaluated intil project end during testing.
+
+Incremental Model Mitigates Risk
+- Risks identify featyres whose implementation is not understood or requirements that it may not possible to meet.
+- Identify risky features early in project's execution.
+
+Incremental development allows us to identify problems early in the project lifecyle with the systems basic design.
+
+
+
+Chapter 3 - Prescriptive Software Development Process
+- Covers Waterfall and Incremental
+
+- A lifecycle model is an apporach to building software.
+- Prescriptive model prescribes a set of activities and artifacts that guide the development to conclusion successfully.
+- The Agile Model abandons most of activites in favor of an approach that relies on the team to self organize and produce complete systems.
+
+
+Software Development Process 
+- A specific set of phases, activities, and artofacts that an organization adopts.
+
+- A process describes the steps/procesdures the team follows when executing software.
+
+- Software Development process can be learned from the book.
+
+- Most organizations create their own unique process which they follow during their project's lifecycles.
+
+
+
+Tradeoff: The cost of eliminating all errors vs. the cost of recovering from failure
+- Systems where errors cause a minor incovenience.
+- Systems whoe failures cause a major loss of life or infrastructure failures.
+
+Unified Process
+- Unified Process is an actual process whose execution involves executing iterations of N weeks.
+Features of UP include:
+- Based on traditional OO analysis and design.
+- prescriptive nut incorporates an incremental approach to systems development.
+- tightly couple with UML as its Analysis and Design notation.
+- UP is iterative/incremental process.
+
+
+CM - PM - OP - OR
+
+CM - Customer Management
+-- Customer Login
+-- Customer Password Reset
+PM - Product Management
+OP - Order Processing
+OR - Order Delivery
+
+
+
+Inception - Iteration - Refine Requirements - Analysis & Design - Construction - System Evaluation - Iteration Evaluation
+
+                                                                                - System Deployment
+Inception/Pre Project
+- Team and customer meets
+- builds a business plan and schedule
+
+
+Requirements Workflow
+- goal of any requirements gathering activity is understanding and capturing the client's needs.
+
+Analysis Workflow
+- goal is to refine the requirements and develop detailed knowledge.
+
+Analysis in iterative process
+- team focuses on the analysis of a small set of features.
+
+Design Workflow
+- Goal is to describe how the system does it.
+- refines the models produced during analysis to the point that those models can be coded.
+- DW adds deatils to the classes/components identified during analysis.
+- Design models define software services.
+
+
+Design in an iterative process
+- team can focus on design.
+
+Implementation Workflow
+- Implementation Workflow goal is to construct the system using the chosen language, tools, and other tech.
+- During implentation, unit testing happens.
+Unit Test is a class and a set of methods whose purpose is to test methods.
+- Implentation requires the combined effort of multiple developers each of which is responsible for some component.
+
+
+
+
+Manage a software development process
+- Organization should monitor the execution of the process throughout the project lifecycle.
+- Known as Umbrella Activities because they encompass, or cover, the entire development process.
+
+
+Project Management Tradeoff
+The Desire: Customers want systems with many features, produced at monimum
+
+
+Chapter 3 - The Prescriptive Software Development Process
+How much will process cost to execute?
+- What impact will process have on dev team's productivity
+- How much time will developers spend on activiteis that dont contribute to system's construction.
+
+- How much will failure cost? How critical are our systems
+- Can a system failure result in injury?
+- most extreme are life critical
+
+The desire: Customers want systems with many features, without errors, and produced at minimum cost.
+The reality: They can have a system with many features, that executes without errors, and at least expense... But they can have only two.
+
+- There is a tradeoff between these three qualities
+- For example. If they want to increase scope (add features), increase budget or decrease quality.
+
+How can organization improve its development process?
+- Reduce number of incorrect or missing requirements.
+- Improve the accuracy of estimates of the time and resourced needed to complete project.
+- Improve quality of products.
+- Ensure process is followed by developers.
+
+Capability Maturity Model Integration (CMMI)
+- A process that decrease risks in software products and service development.
+- A premise is that if the organization actively improved.
+- The CMMI is a strategy for evaluating the effectiveness of software development.
+
+- CMMI describes 5 levels of conformance.
+- Each level describes an increasing commitment to defining, documenting, enforcing, monitoring, and improving the organization's software development process.
+- CMMI is used to categorize the effectiveness of an organization's current development process.
+
+Level 1: Initial Level 
+- Organization has no defined process.
+- Level 1 process will result in unmanageable chaotic projects with poor quality.
+- Level 1 could work in small projects with staffed by qualified developers
+
+Level 2: Repeatable Level
+- Organization begins the effort of using a process.
+- Organization defines and documents a process where it is repeatable
+- Basic project management and milestones with estimated end date.
+- However, organization does little to ensure the process is practiced.
+- little review or oversight to execution.
+- no sufficient time.
+- process is ignored, minimally executed.
+
+Level 3: Defined Level
+- A process is well defines, documented, and communicated throughout organization
+- Specified artifacts
+** - Organization management emphasizes and enforces the process utilization across all projects. ****
+
+Level 4: Managed Level 
+- Organization actively measures the project's performance. 
+- Process identifies quanitifiable metrics.
+- The organization defines acceptable levels for these metrics which projects strive to meet or better.
+- Care must be taken to avoid unfairly penalizing a project with special circumstances.
+- Acceptable metric need to be defined on a per project level.
+
+Level 5: Optimizing Level
+- Organization actively strives to improve their process.
+- Typically using metrics gathered across all project executions.
+- Organization analyzes the performance of the process itself looking for areas of improvement.
+- Organization strives to correct these weakness by analyzing the root cause and making appeals to the process.
+
+CMMI Compliance
+- Once an organization integrates with CMMI, the organization can choose be audited by a third party that will certify how well the organization is executing.
+- Organization will be rated by auditors as maintaining, or executing at least one of 5 maturity levels.
+- Rating is an assurance to both organization, and the organization's customers, that a process is being maintained.
+- Proving reassurance to the customer that the software and other products will be of a high quality.
+- Much like ISO standards for food, drugs, components, and other manufactured products.
+
+
+- Auditing provides the organization the benefits of maintaining a CMMI compliance process.
+- CMMI certification is a market advantage when the organization is competing for contracts or other forms of work.
+
+
+CMMI Drawbacks
+- High level CMMI comformance requires significant resources in both practicing sand monitoring process execution.
+- Following levels 4 and 5 requires significant resources.
+- Organizations having highly critical applications will find that the dicsipline and control offered by a CMMI are justified.
+
+Requirements Gathering 
+- Section describes the activities and artifacts surrounding the gathering of system requirements.
+- Activities: Techniques for eliciting information from the SME.
+- Artifacts: Documents.
+- Formal Requirements: Declarative descriptions of a specific feature.
+- Use Cases: Narratives that describe how the system is utilized by its users/external actors.
+
+- Requirement Gathering activites focus on determining with customer/users needs from new system.
+- Analysis activities translate features and requirements into the classes and other models that describe the application domain.
+
+- Formal Requirements: A document containing written declarative statements that (more or less) precisely describes what the system knows and does.
+- Use Cases: Descriptions of the interactions between the system and its users(clients) that describe what the system needs to know and do.
+- UML Activity Diagrams - Graphs of UML
+
+Glossary: A document that describes the domain specific terms to describe system.
+Prototypes: Simple mockups of some aspect of the system.
+
+
+Deep vs Shallow Requirements 
+- Ideally the system's requirements capture what the system features/functionality in precise detail.
+- Classic waterfall emphasizes capturing a system's requirements broadly and deeply during project execution.
+- Incremental process emphasize capturing requirements broadly and shallowly during project inception.
+
+
+Requirements Gathering and the 80-20 Rule
+- Graph indicates that the first 60% of the formal requirements may be gathered relatively quickly.
+- But that the remaining requirements will become increasingly difficult to identify. 
+- the last 20% of requirements take 80% effort.
+- True when the requirements must be produced in the waterfall-mandated Big Up Front Design 
+
+
+
+
+
+
+
+
+Use Cases: A document describing the interaction between the Actor and the system that occurs when the actor attempts to produce a result.
+- Consists a set of scenarios.
+
+Actor: Someone or something that interacts with the system.
+- Usually a person, but can be a outside system
+- Actors are identified by the role they have in the system.
+- Customer is a role of users browsing and making purchases.
+- Product managers is the role of users that have acceess to and maintain products sold.
+- Business manager is the role of users that access sale reports describing the economic performance of the company.
+
+
+
+Actors are categories of users.
+- Actor describes the needs and gaoals and responsibilities of a goup of individuals as they interact with system.
+- Customers register with system
+- Customers browse products
+- Customers place orders.
+- Product managers CRUD product descriptions, categories.
+- Business managers generate sales reports, make strategic decisions.
+- Every users of the system belong to a specific role and are assumed to have the same goals.
+
+
+Primary Actor: The user/system who benefits from interacting with the system.
+- Has goals they wish to fulfill through interaction with the system.
+- Every use case involves a primary user.
+
+Customer is primary actor who interacts with the system through check.
+Customer service rep is also primary actor. Needs to talk with customer manager to get private info.
+
+Supporting Actor: Provides a service needed by the system to fulfill the goal/scenarios.
+- Including a supporting actor is optional and not needed when creating use cases.
+- When used, supporting actors often identified external system interfaces. For example, the credit card system used to validate 
+and debit the customers's account.
+
+Use Case Goals
+- Each use case should describe the actor's goal that motivates the interaction with system.
+- Actor accomplishes something non trivial with system.
+- Actor generates/produces some useful information.
+- Goal furthers interests of actor or interests of organization.
+
+Ex. 
+1. Customer wants to register a new account.
+2. Customer wants to select item for purchase.
+3. Customer wants to create an order.
+4. Product manager wants to maintain products sold by the site.
+
+Evaluating Goals
+- Not every identified goal warrants a use case.
+- Does a proposed use case goal produce menaningful results to user or is it sub goal?
+- Does the goal pass the boss test?
+Meaningful Goal: I processes an insurance claim for the organization.
+Insignificant Goal: I entered a subscribers ID into a field.
+
+Use Case Scenarios
+(Ecommerce Customer Checkout)
+Customer                                                                           
+1. Builds a shopping cart of selected items and checks out (Trigger Event)
+System
+1. Displays a list of selected items including quanitity description, unit price, tax, and total price minus shipping.
+Customer
+2. Accepts the product list.
+System
+2. Displays a list of payment options including the primary credit card as the default.
+Customer
+3. Accepts the default payment option.
+System
+3. Displays a list of delivery addresses if multiple acddresses were provided.
+Customer
+4. Accepts the default delivery address
+System
+4. Displays a list of shipping options with USPS 3 day delivery as default option. Each shipping option has different shipping costs.
+Customer 
+5. Accepts the default shipping option.
+System
+5. Displays the order summary including the selected payment option, shipping tax, and total price.
+Customer
+6. Accepts the order as presented.
+System
+6. Builds a new order and submits it for downstream processing.
+
+
+Main Success Scenario: Happy Path
+Alternative Success Scenario: describes an alternative workflow that is successful.
+Alternative Failure: Actor fails despite alternative workflow.
+
+Use Case Documents
+2 formats
+Brief Use Case Format
+Customer Checkout - Main success scenario
+Customer Checkout - Alternative failure scenario
+1. Brief Format: a brief written format.
+2. Fully Dresses Format:
+
+Use Case ID: An ID that uniquly identifies the use case.
+Use Case Name: a descriptive name.
+DEscription: a few sentences that describe the use case's purpose.
+Scope: The system/component being modeled.
+Primary Actor: The name of the primary actor.
+Goal: A few senetences describing the actors goal.
+Trigger Event: The event that triggers the use case's actions; usually the initial action taken by the primary actor but can be taken by system.
+
+
+Preconditions: The conditions assumed to exist prior to the use case's execution
+Success Criteria: The conditions that must exist after the use case execution for its execution to be successful
+Main Success Scenario: The main happy path scenario.
+Alternative Scenario: Multiple scenarios describing other paths to success or failure.
+Non-Functional Requirement: Performance, security, and other non functional aspects that are required.
+
+
+Common Use Case Features
+- Trigger event at the beginning of scenario.
+- Must be an exchange of information between actor and system.
+- Narrative is broken into steps taken by each party.
+
+Developing Use Cases
+- Process of capturig use cases identifies these steps:
+Identifies the system's actors and goals.
+- Each of actors goals should identify a potential use case.
+
+MSS describes the simplest or most likely path which is default.
+ASS often overide default options.
+Alternative Failure incolves unrecoverable patterns.
+
+Use cases are a productive method of capturing functional requirements.
+- Non functional requirements are difficult to capture as scenarios.
+
+To properly capture a system's requirements teams should consider a mix of use cases and traditional requirements.
+
+Us eCases produce superior results
+- Use cases are an alternative to formal requirements for extracting system requirements from the SME.
+- Building use cases has been shown to produce higher quality requirements.
+- Use cases provide a vehicle for the SME to describe knowledge.
+- Use cases emphasize the user's perspective/experience.
+
+UML Activity Diagrams
+- Activity Diagram have several advantages over the textual presentation.
+- Activity Diagrams can present descisions.
+
+Metrics for rquirements workflow 
+- Inception + Elaboration phase should take no longer then 30% of the project scheduled duration.
+- Monitor how often are seemingly completed requirements are changed.
+- A decrease in requirements modification indicates that the elaboration phase is successfully concluded.
+
+
+Unified Modeling Language
+UML stands for Unified Modeling Language
+
+Class Diagrams describe both a class and the relationships between classes.
+
+- UML Diagram provide a medium for team problem solving.
+
+- Modeling with diagrams reduces risk and development costs.
+
+Structure Diagrams describe the static structure of design classes.
+- Structure diagrams describe the static relationships between classes.
+- Structure diagrams, class diagrams, deployment diagram, and others.
+
+- Dynamic diagrams emphasize the interaction between objects as they implement the system's services.
+- Interaction between objects is modeled as method invocations.
+- also capture object lifetimes which describe when objects are created.
+
+UML Case Tool
+- difficult to utilize a UML without case tool.
+- Computer Aided Sofware Engineering.
+
+- CASE Tool provides:
+- a means of building both static and dynamic diagrams describig the nature of a software design.
+- a means of maintaining the design artifacts.
+
+- EML editor vs case tool. the editor maintains the design artifacts.
+
+
+Astah UML editor
+
+Class name on top
+Attributes on middle
+Operations/Methods in bottom
+
+- means private
++ means public
+# means protected
+~ means package private member
+
+
+Stereotypes describe the class's role in system design.
+- Stereotypes might describe a pattern implemented by class.
+- Stereotypes denote an abstract class.
+- Abstract classes can be described using a stereotype or italics.
+
+
+Extends 
+- Represents inheritance or is kind of relationship between two classes
+- Arrowhead os presented as a closed triangle.
+
+Association
+- two classes with a relationship.
+- can be modeled using instance variables or arrows
+- implemeted as instance variables on the owning side.
+
+1(default) 
+* - zero or more instances
+N-N instances
+0..* - 0 or more instances
+1..* -  or more instance
+N..M - between N and M 
+
+Dependency
+- Dependency is a weaker form of Association
+- Dependency implies that ClassA uses ClassB
+- Dependency describe the Client-Server relationship
+
+Composition
+- Composition describes an association is linked througb life cycle dependency.
+- denoted with a filled diamond
+
+
+Unified Process Class-Categories
+Entity Classes represent problem-domain (business) objects.
+- Found in problem domain.
+- Things that are CRUD 
+- Entitites are often persisted objects that are stored in database.
+
+Boundary Classes represent the boundary between the system and its users or external systems
+- These can represent GUI screens
+- represent interfaces provided to external systems
+
+Controller Classes represent the implementation of scenario workflows.
+
+
+Entity Class describes the things found in the problem domain.
+- Things that are CRUD produced and manipulated by the system.
+
+
+Purchase is a noun and has instances and every purhcase has a distinct identity.
+
+
+Entity Classes
+- A valid entity class should be identified as:
+Symbol: Does the thing have a unique name?
+Intension: Can we describe the thing's purpose 
+Extension: Are there distinct instances?
+
+- If we can't identify a class's extension, we have a verb that describe an operation taken by a class.
+- A customer updates their identity.
+
+Identify Nouns and Noun Phrases
+
+
+Unified-Process Class Categories
+- Entity Classes represent problem-domain (business) objects.
+- these are found in problem domain.
+- often persisted objects stored in database.
+
+Boundary Classes 
+Noun Phrases
+
+Purchases need to retain their items.
+
+
+Derived Attributes
+Derived Attribute is an attribute that is calculated on demand when the client requests information.
+- Purchase.totalPrice : double is derived from the sun of items plus shipping and sales tax.
+- Specified in UML with '/'
+- Implemented as getter methods.
+
+
+Controllers are service classes that implemetn the interactions between system components needed to implement a workflow.
+
+- A workflow describe a series of processing steps needed to CRUD data or produce some result.
+- Create a new entity instance (add customer)
+- Coordinate processing the customer's selected products and payments.
+- Coordinating the activities of gathering and combining info to produce a report by zip code.
+
+
+
+Controllers implement Use Case Scenarios
+Controller can be defined for each use case scenario.
+- Controller are found between Boundary and Entity Classes.
+- A Boundary class triggers a behavior (method) in a Controller and the Controller CRUDs entities.
+in most cases its wrong for boundary classes to interact with use cases.
+
+
+Controllers implement the workflow, interaction.
+Controller should delegate to service classes.
+
+
+From Modules to Objects - Chapter 7
+Principles of software design
+- design a system's software
+- decompose a system according to its responsibilities into modular compomnents and classes.
+- identify correct asasignment of responsibilites to classes with better design
+
+- Modularity and Modular Design
+- Cohesion
+- Coupling
+
+Attributes of a properly designed system
+1. Correctness: The ability of the software system to perform its tasks as defined by its system requirements.
+2. Robustness: The ability of the software system to react approproately to abnormal inputs and failures.
+3. Extensibility: The ease of adapting the software to changes in its requirements. Also the ability to add more features to the system without breaking any features. 
+4. Testability: The ability to easily verfiy the correctness of components as they are created.
+5. Understandability: The ability to infer the intent of the software design using source code.
+6. Reusability: The ability to use a subsystem, component, or class in more than one system/application.
+
+
+Modularity 
+Design Modularity
+1. A system implemented as a single module file containing functions and data structures.
+2. A system partitioned into several classes, but without any clear assignment of functional boundaries.
+3. A system whose services are partioned into several components with well-defined functional boundaries (encapsulation)
+
+Example 3 is most likely to be successful. Example 1 and 2 have lack of understandability, lack of extensibility, lack of reuseability.
+
+Define Modular Design
+- Overall system design is partitioned into modules with clear functional boundaries.
+- Modules are individual units of design and implementation.
+- Modular design helps reduce burden of designing the system by allowing designers to focus on design of each module seperately.
+- Modular System's design is composed of multiple modules, each of which cam be understood, designed and implemented seperately from the other modules.
+
+Components are abstract collections of classes designed to provide related system services.
+- provides a public interface for clients 
+- Components are not represented in software implementation.
+
+Classes are units of design that are reflected in the software implementation.
+- a class implements a public facing service.
+
+Three-tier architecture
+1. Presentation Component: Classes that present to users or accept info from users/clients. Boundary classes.
+2. Service Component: Classes responsible for creation, validation, information processing, and implementation of business rules.
+3. Data Component: Classes that support persistence (databases) and interfaces to external services.
+
+
+Module is a component or a class
+- A set of responsibilities with common purpose that define the services provided by the module.
+
+Modules provide a means of partioning and assigning responsbilities within the system's design
+
+Functional Decomposition - technique used to identify a system's modules in a systematic manner.
+
+
+A well designed system is one in which the coupling between modules is minimized and constrained to the interfaces provided by the modules.
+- Each module should encapsulate its implementation.
+
+Components should be black boxes to their clients.
+- Accessible only through their interfaces.
+- Black boxes into which the client cannot see the component's design and implementation.
+
+Levels of Software Modularity
+- Components are abtract collections of classes designed to provide related system services.
+- Classes are units of design reflected in the software implementation.
+- Interfaces describe the services provided by a component or class.
+Cohesion - instead of having one component, there is a large and complex component.
+
+Design Cohesion
+Design Cohesion suggests the responsibilites assigned to an individual should be focused on their intent.
+- Cohesion is increased if the design of a module is focused on a single responsibility or set of closely related.
+- Cohesion is decreased if the responsibilities assigned to a module have little in common.
+
+- Cohesion can be applied to any type of module, components, classes, and interfaces.
+
+
+High Cohesion Pros
+- Cohesive component has simpler interfaces and implementing classes making it easier to understand.
+- Cohesive class is smaller and more focused.
+- Easier to reuse 
+
+Classes with high cohesion maintain
+1. Extensibility
+2. Reusability
+3. Understandability
+4. Testability
+
+Incremental process we are constantly updating and adding new features to the system's design and implementation.
+
+
+Chapter 7 - From Modules to Objects
+Desired - Correctness, Extensibility, Robustness
+
+
+Modularity and Modular Design
+
+Design Coupling
+- Coupling describes the quality of the relationship between two or more classes.
+- describes the degree to which two or more classes are dependent on each other's implementations.
+- describes the degree to which the implementation of a class can affect the implementation of its clients.
+
+- A well designed server class isolates (hides) the details of its implementation from its client classes.
+- Isolating the implementation details enhances maintainability, extensibility, resuability, understandability. testability, etc....
+
+
+Customer Lookup Service
+CustomerLookupService
+- reports create and submit SQL queries to the CustomerLookupService which maintains the connection/interface to the database. 
+
+CUST
+ID: Lang
+Fn: String
+Cn: String
+Ac: String
+Phone #: String
+
+Coupling between Clients and Servers
+Loose Coupling: if all information exchanged occurs between clients and server through parameters/values passes as method and return values.
+Tight Coupling: if some or all information exchanged between the server occurs through shared data structures or when the client directly manipulates the variables.
+
+A desired quality is to be as loosely as possible.
+Loosely coupled if changes made to server without breaking any clients.
+Tightly coupled if the change to a server results in re-implementing the client classes.
+Two service classes are tightly coupled if a change in one requires a change in the other. 
+Weak vs. Strong Coupling.
+
+
+Lecture 03/28/2023
+Chapter 8
+
+Customer Lookup Service 
+- reports create and submit SQL queries to the CustomerLookupService which maintains the connection/interface to the database.
+
+Types of Coupling
+1. Interfaces: C1 is a client that needs a service provided by S2. Class C1 is dependent on S2's interface.
+- Interface Coupling is an unavoidable and necessary coupling between client and server classes.
+
+2. Semantics of:
+- C1's assumptions about information exchanged with S2 must be consistent with S2's implementation.
+If S2 requires dates in a string format or measurements in metric, C1 must be consistent with those formats.
+How to make this coupling less fragile?
+
+3. Location of:
+If C1 is a client of a distributed service S2, then C1 must be aware of S2's location (network address).
+- if S2 is a network service, then C1 must be provided, or allowed to discover the network address of S2.
+- Another unavaoidable and necessary form of coupling in distributed systems.
+
+4. Quality Service: The correct operation of C1 depends on the performance or accuracy of services provided by S2.
+- C1 requires a certain performance from S2's implementation.
+- An algorithm controlling a chemical reaction implemented by C1 will not work if S2 (a sensor) can't provide temperature measurements accurate 
+within +-.5 degrees.
+
+5.  Resource Behavior: S2 uses a variable (memory) that is managed by C1.
+- S2 loads data into a buffer provided by C1. S2's assumptions about the length of the buffer must be consistent with the amount of memory allocated to the buffer
+by C1. 
+
+Cons of Tight Coupling
+- A changes in toughtly coupled service class forces a ripple of changes in client class.
+- Difficult to understand a tightly coupled classes in isolation.
+- Difficult to reuse or test tightly coupled classes.
+- Since all ciupled classes must be included in new system.
+
+Pros of Loose Coupling
+- Less fragile.
+- Easily extended
+- Easily modified.
+- Can be analyzed in isolation improving the system's understandability.
+- Can be tested in isolation improving the system's testability.
+
+
+Law of Demeter
+(Reduce Coupling in a Design)
+- Passes the information needed by the service.
+- Pass the values not the objects maintaining the values.
+
+Apply Basic Object Oriented Practices
+- Reduce coupling by using encapsulation and enforcing modularity.
+
+
+Define and use an interface to isolate a service's definition from its implementation.
+- Use of Interfaces improves encapsulation.
+
+
+- Circular Dependency is hard to maintain between classes.
+
+
+
+
+Chapter 12 - Design Workflow
+Software Design Bridges System's Analysis to Construction
+- Inputs to the design workflow are the analysis models. Class diagrams, use cases, and others.
+
+- Dev team translates analysis models into design models.
+- Design models include design classes, controllers, database schemes, GUI screens, etc....
+
+- The development team identifies a software design that best meets both the customer's functional requirement and enhances quality attributes based on the customer's needs 
+and available resources.
+
+
+- Similar/Same quality attributes to section 8
+
+How to identify and design classes?
+- Software is soft. No physical limitations that keep a bad design from working.
+- Given enough time and resources.
+- Poor Design has limited resources.
+
+High quality - low coupling, cohesive, quality attributes.
+- meets the customer's performance, availability, and non functional requirements.
+- planned and executed within the restrictions.
+
+
+Functional Requirements and Use Cases should be well defined.
+- MSS and alternative scenarios.
+
+- Entity and Boundary classes should be well defined.
+- Classes, attributes, and relationships between entities.
+- Understand the information being passes into and out of system based on use cases.
+- Controller classes are identified, but not completed.
+- Identify workflows from use cases.
+- Sequence diagrams can be defined but contain only the high level interactions between the analysis classes. Amount of details depends on individual style.
+
+
+Extending the Analysis Artifacts
+- transition from analysis to design is hard to define.
+- amount of analysis needed can depend on how familiar the dev team is with the problem domain.
+- design artifacts are produced during both phases.
+- Class, sequence, and other UML diagrams are produced in both the analysis and design phases.
+- The amount of effort required during the design workflow depends upon how much detail was produced during analysis.
+
+Extending the Analysis Models into Design
+- Boundary classes from analysis need to be implemented as screen depending on the selected GUI technology.
+
+- Controller classes identified during analysis are placeholders for the implementation of the use case workflows.
+- One controller per use case.
+- But controllers defined during analysis lacks the detail needed to implement their workflows.
+
+- Design activities extend analysis controllers to include the services needed to implement their use case workflows.
+- Each step in the workflow might identify a service needed by the controller to fulfill responsibilities.
+
+- Services needed to build entity objects, e.g. Customer
+- Services needed to validate information provided by the user.
+- Services that interface to external servics. proxy services like FedEx.
+- Services needed to implement application-specific features like taxes and payment amounts.
+
+4 goals of the Design Workflow
+1. Systematically extend the analysis models
+2. Extend the vaguely defined analysis controllers.
+3. Identify opportunities to apply design patterns and other means of standardizing the improving the design.
+4. Estimate time and manpower resources needed to execute the design and establish and firm delivery date.
+- design workflow is finished when the development team feels their design can be correctly scheduled and successfully executed.
+
+
+Responsibility Driven Design
+- design elicitation technique driven by the client server relationship between classes.
+- helps to identify the class responsible for implementing a service.
+asks which class is providing service?
+
+2 types of responsibility
+1. Knowing Reponsibilities: System responsibilities for knowing something.
+2. Doing Responsbilities: System responsibilities for doing something.
+
+- Smart Controllers implements many of its reponsibilites
+- Dumb Controllers delagate the implementation of its responsibilies to the service classes.
+
+
+
+Design Patterns
+Singleton Pattern
+UML Class Notation
+
+
+3 tier architecture
+
+
+Agile Development Process
+
+
+When the Agile is appropriate
+- Agile process is appropriate when the cost of a system failure is low.
+- Projects with vague requirements or change often.
+- When the SME/decision makers are always available. Because Agile forgoes the BUFD, the SME is a team member always available to answer questions and evaluate
+the developing system throughout the project's execition.
+- Small development teams of at most 10 developers.
+- With a tightly integrated development team.
+- With management that trusts the process and the dev team.
+- A project that can tolerate schedule slippage.
+
+Prescriptive Process is the best when...
+- highly critical projects
+- large, complex problem domain
+- team can not communicate effectively 
+- culture that demands order.
+- project requiring many developers.
+
+
+Crticisms of Agile
+- Many of the Agile principples seems to defy accepted design and project management practices.
+- Not emphasizing requirements before beginning to code.
+- Running loose and fast without considering the future.
+- Lacks mechanisms and metrics needed for proper project management.
+
+
+Project Management
+Traditional Project Management
+
+
+Software Testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
